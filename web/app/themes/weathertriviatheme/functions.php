@@ -323,6 +323,30 @@ jQuery(document).ready(function() {
         document.getElementById("time").innerHTML = pos;
     }
 
+    const remaining = () => {
+
+        startedMotion2 = setInterval(frame2, 10);
+
+        jQuery("#myRadio").val(number1);
+        console.log($("#myRadio").val());
+        jQuery("#myRadio2").val(number2);
+        jQuery("#myRadio3").val(number3);
+        jQuery("#myRadio4").val(number4);
+        jQuery('#bottom').css({
+            'opacity': '0.8'
+        });
+        jQuery('#bottom').css({
+            'display': 'block'
+        });
+        jQuery("#hidden").removeClass("hidden");
+        document.getElementById("question").textContent =
+            "Which of these places is currently the coldest?";
+        document.getElementById("loc1").textContent = " " + q1a1;
+        document.getElementById("loc2").textContent = " " + q1a2;
+        document.getElementById("loc3").textContent = " " + q1a3;
+        document.getElementById("loc4").textContent = " " + q1a4;
+    }
+
     const problemOne = () => {
         startWait();
         getNames();
@@ -332,29 +356,6 @@ jQuery(document).ready(function() {
         setTimeout(windClock, 3500);
         setTimeout(endWait, 3000);
 
-        const remaining = () => {
-
-            startedMotion2 = setInterval(frame2, 10);
-
-            jQuery("#myRadio").val(number1);
-            console.log($("#myRadio").val());
-            jQuery("#myRadio2").val(number2);
-            jQuery("#myRadio3").val(number3);
-            jQuery("#myRadio4").val(number4);
-            jQuery('#bottom').css({
-                'opacity': '0.8'
-            });
-            jQuery('#bottom').css({
-                'display': 'block'
-            });
-            jQuery("#hidden").removeClass("hidden");
-            document.getElementById("question").textContent =
-                "Which of these places is currently the coldest?";
-            document.getElementById("loc1").textContent = " " + q1a1;
-            document.getElementById("loc2").textContent = " " + q1a2;
-            document.getElementById("loc3").textContent = " " + q1a3;
-            document.getElementById("loc4").textContent = " " + q1a4;
-        }
     }
 
     jQuery("#begin").on("click", function() {
