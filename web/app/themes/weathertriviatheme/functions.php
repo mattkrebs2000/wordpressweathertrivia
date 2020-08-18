@@ -31,7 +31,6 @@ jQuery(document).ready(function() {
     let q1a3 = "";
     let q1a4 = "";
     const objectToChange2 = document.getElementById("timeRemaining");
-    const objectToChange2 = document.getElementById("timeRemaining");
     const objectToChange3 = document.getElementById("time");
     const objectToChange4 = document.getElementById("correct2");
     const objectToChange5 = document.getElementById("myRadio");
