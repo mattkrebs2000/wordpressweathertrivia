@@ -30,7 +30,7 @@ jQuery(document).ready(function() {
     let q1a2 = "";
     let q1a3 = "";
     let q1a4 = "";
-    let objectToChange2;
+    const objectToChange2 = document.getElementById("timeRemaining");
     const Cities = ["Fairbanks, Alaska", "Ulaanbaatar, Mongolia", "Yakutsk, Russia",
         "Harbin, Heilongjiang, China", "International Falls, Minnesota", "Yukon, Canada",
         "Fraser, Colorado", "Sarmiento, Argentina", "Glen Innes, Australia", "Sutherland, South Africa",
