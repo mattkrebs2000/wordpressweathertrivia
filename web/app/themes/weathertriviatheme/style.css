@@ -1,12 +1,12 @@
 /*
-Theme Name: wordguesstheme
-Theme URI: https://pure-refuge-84477.herokuapp.com/themes/wordguesstheme/
+Theme Name: weathertriviatheme
+Theme URI: https://pure-refuge-84477.herokuapp.com/themes/weathertriviatheme/
 Author: Matt Krebs
 Author URI: https://pure-refuge-84477.herokuapp.com/
 Description: This is a custom theme adapted from a website that I made without Wordpress.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: wordguesstheme
+Text Domain: weathertriviatheme
 */
 
 /* body {
@@ -20,7 +20,6 @@ Text Domain: wordguesstheme
   font-family: "Times New Roman", Times, serif;
  
 } */
-
 
 #title {
   text-shadow: 2px 2px 4px #000000;
@@ -405,13 +404,12 @@ h3 {
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
- 
+  padding: 20px;
+  max-height: 800px;
 
-
+  background-position-y: top;
+  margin-top: -30px;
 }
 
 .bears {
@@ -423,10 +421,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 
 .bengals {
@@ -438,10 +438,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 
 .bills {
@@ -453,10 +455,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .broncos {
   background-image: url("./images/broncos.png") !important;
@@ -467,10 +471,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .browns {
   background-image: url("./images/browns.png") !important;
@@ -481,10 +487,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .buccaneers {
   background-image: url("./images/buccaneers.png") !important;
@@ -495,10 +503,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .cardinals {
   background-image: url("./images/cardinals.png") !important;
@@ -509,10 +519,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .chargers {
   background-image: url("./images/chargers.png") !important;
@@ -523,10 +535,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .chiefs {
   background-image: url("./images/chiefs.png") !important;
@@ -537,10 +551,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .colts {
   background-image: url("./images/colts.png") !important;
@@ -551,10 +567,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .cowboys {
   background-image: url("./images/cowboys.png") !important;
@@ -565,10 +583,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .dolphins {
   background-image: url("./images/dolphins.png") !important;
@@ -579,10 +599,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .eagles {
   background-image: url("./images/eagles.png") !important;
@@ -593,10 +615,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .falcons {
   background-image: url("./images/falcons.png") !important;
@@ -607,10 +631,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .fortyniners {
   background-image: url("./images/fortyniners.png") !important;
@@ -621,10 +647,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .giants {
   background-image: url("./images/giants.png") !important;
@@ -635,10 +663,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .jaguars {
   background-image: url("./images/jaguars.png") !important;
@@ -649,10 +679,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .jets {
   background-image: url("./images/jets.png") !important;
@@ -663,10 +695,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .lions {
   background-image: url("./images/lions.png") !important;
@@ -677,10 +711,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .packers {
   background-image: url("./images/packers.png") !important;
@@ -691,10 +727,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .panthers {
   background-image: url("./images/panthers.png") !important;
@@ -705,10 +743,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .patriots {
   background-image: url("./images/patriots.png") !important;
@@ -719,10 +759,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .raiders {
   background-image: url("./images/raiders.png") !important;
@@ -733,10 +775,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .rams {
   background-image: url("./images/rams.png") !important;
@@ -747,10 +791,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .ravens {
   background-image: url("./images/ravens.png") !important;
@@ -761,10 +807,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .redskins {
   background-image: url("./images/redskins.png") !important;
@@ -775,10 +823,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .saints {
   background-image: url("./images/saints.png") !important;
@@ -789,10 +839,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .seahawks {
   background-image: url("./images/seahawks.png") !important;
@@ -803,10 +855,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .steelers {
   background-image: url("./images/steelers.png") !important;
@@ -817,10 +871,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .texans {
   background-image: url("./images/texans.png") !important;
@@ -831,10 +887,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .titans {
   background-image: url("./images/titans.png") !important;
@@ -845,10 +903,12 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 .vikings {
   background-image: url("./images/vikings.png") !important;
@@ -859,22 +919,21 @@ background-position-y:top; margin-top: -30px;
   background-attachment: fixed;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
-  
-  padding: 20px; max-height: 800px; 
 
-background-position-y:top; margin-top: -30px;
+  padding: 20px;
+  max-height: 800px;
+
+  background-position-y: top;
+  margin-top: -30px;
 }
 
 #try {
-
   min-height: 1200px;
   height: inherit;
   top: -100px;
-
 }
 
-
-html{
+html {
   height: 100%;
 }
 body {
@@ -885,4 +944,3 @@ body {
   font-size: 20px;
   color: black;
 }
-
