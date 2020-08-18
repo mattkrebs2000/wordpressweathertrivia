@@ -17,7 +17,7 @@
     </script>
     <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
 
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel=" stylesheet" type="text/css">
+    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css">
 
     <?php wp_head(); ?>
 </head>
