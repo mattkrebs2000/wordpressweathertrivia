@@ -336,7 +336,7 @@ jQuery(document).ready(function() {
             let objectToChange13 = document.getElementById("question");
             let objectToChange14 = document.getElementById("submit");
 
-            const startedMotion2 = setInterval(frame2, 10);
+            let startedMotion2 = setInterval(frame2, 10);
 
 
             jQuery("#myRadio").val(number1);
