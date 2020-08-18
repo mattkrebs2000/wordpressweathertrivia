@@ -334,7 +334,7 @@ jQuery(document).ready(function() {
         setTimeout(windClock, 3500);
         setTimeout(endWait, 3000);
 
-        remaining = () => {
+        const remaining = () => {
 
 
 
