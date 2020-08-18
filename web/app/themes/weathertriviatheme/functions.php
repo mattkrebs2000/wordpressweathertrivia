@@ -54,8 +54,7 @@ jQuery(document).ready(function() {
         "Medan, Indonesia", "Singapore", "Kuala Lumpur, Malaysia", "Bogota, Colombia"
     ];
 
-
-    function getNames() {
+    getNames = () => {
 
         for (i = 0; i < 4; i++) {
             const newIndex1 = (Math.floor((Math.random() * 35)))
@@ -82,6 +81,7 @@ jQuery(document).ready(function() {
         q1a3 = (Cities[thirdIndex1]);
         q1a4 = (Cities[fourthIndex1]);
     };
+
 
 
     function getTemps() {
@@ -295,8 +295,6 @@ jQuery(document).ready(function() {
         objectToChange13.style.opacity = pos2 + "%";
         objectToChange14.style.opacity = pos2 + "%";
     }
-
-
 
 
     function windClock() {
