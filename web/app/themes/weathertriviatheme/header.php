@@ -21,3 +21,5 @@
 
     <?php wp_head(); ?>
 </head>
+
+<body class="bg">

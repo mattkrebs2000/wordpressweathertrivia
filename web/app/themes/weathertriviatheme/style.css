@@ -16,7 +16,7 @@ body, html {
 .bg {
 
   width: 100vw;
-  height: 10 0vh;
+  height: 100vh;
 
   background-image: url('./images/weather.png');
   background-size: cover;
