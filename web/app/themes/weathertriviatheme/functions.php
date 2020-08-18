@@ -258,6 +258,8 @@ jQuery(document).ready(function() {
         jQuery("#thirdOption").html("");
         jQuery("#fourthOption").html("");
     }
+    let pos2 = -20;
+    const startedMotion2 = setInterval(frame2, 10);
 
     function frame2() {
         if (pos2 == 100) {
@@ -278,6 +280,9 @@ jQuery(document).ready(function() {
         objectToChange13.style.opacity = pos2 + "%";
         objectToChange14.style.opacity = pos2 + "%";
     }
+
+    frame2();
+
 
     function windClock() {
         let startedMotion = setInterval(timerRestart, 1000);
