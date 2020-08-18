@@ -260,7 +260,7 @@ jQuery(document).ready(function() {
         jQuery("#fourthOption").html("");
     }
     pos2 = -20;
-    const startedMotion2 = setInterval(frame2, 10);
+
 
     function frame2() {
         if (pos2 == 100) {
@@ -282,7 +282,7 @@ jQuery(document).ready(function() {
         objectToChange14.style.opacity = pos2 + "%";
     }
 
-    frame2();
+
 
 
     function windClock() {
@@ -335,6 +335,9 @@ jQuery(document).ready(function() {
             let objectToChange12 = document.getElementById("loc4");
             let objectToChange13 = document.getElementById("question");
             let objectToChange14 = document.getElementById("submit");
+
+            const startedMotion2 = setInterval(frame2, 10);
+
 
             jQuery("#myRadio").val(number1);
             console.log($("#myRadio").val());
