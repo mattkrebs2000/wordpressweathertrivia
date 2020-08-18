@@ -4,7 +4,6 @@ function add_js_functions(){
 <script>
 jQuery(document).ready(function() {
 
-    endWait();
     let pos = 30;
     let pos2 = -20;
     let minimum;
@@ -54,6 +53,10 @@ jQuery(document).ready(function() {
         "Medan, Indonesia", "Singapore", "Kuala Lumpur, Malaysia", "Bogota, Colombia"
     ];
 
+    const endWait = () => {
+        jQuery("#waitTime").addClass("hidden");
+    }
+
     const getNames = () => {
 
         for (i = 0; i < 4; i++) {
@@ -81,8 +84,6 @@ jQuery(document).ready(function() {
         q1a3 = (Cities[thirdIndex1]);
         q1a4 = (Cities[fourthIndex1]);
     };
-
-
 
     const getTemps = () => {
 
@@ -158,6 +159,8 @@ jQuery(document).ready(function() {
         minimum = Math.min.apply(null, tempArray);
         showThis = `Result: min: ${minimum}`;
     }
+
+    endWait();
 
     findMinimum();
 
@@ -311,9 +314,7 @@ jQuery(document).ready(function() {
         }
     }
 
-    const endWait = () => {
-        jQuery("#waitTime").addClass("hidden");
-    }
+
 
     const startWait = () => {
         jQuery("#waitTime").removeClass("hidden");
