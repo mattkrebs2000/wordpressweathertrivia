@@ -16,15 +16,15 @@ body, html {
 .bg {
 
   width: 100vw;
-  height: 100vh;
+  height: 10 0vh;
 
   background-image: url('./images/weather.png');
-  background-size: 140%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position:center;
   background-color: #b98970;
+  background-position-y: top;
  
-
 }
 
 #title {
