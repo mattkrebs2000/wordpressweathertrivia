@@ -54,7 +54,7 @@ jQuery(document).ready(function() {
         "Medan, Indonesia", "Singapore", "Kuala Lumpur, Malaysia", "Bogota, Colombia"
     ];
 
-    getNames = () => {
+    const getNames = () => {
 
         for (i = 0; i < 4; i++) {
             const newIndex1 = (Math.floor((Math.random() * 35)))
@@ -84,7 +84,7 @@ jQuery(document).ready(function() {
 
 
 
-    getTemps = () => {
+    const getTemps = () => {
 
         const APIKey = "166a433c57516f51dfab1f7edaed8413";
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
@@ -144,7 +144,7 @@ jQuery(document).ready(function() {
             });
     };
 
-    scoring = () => {
+    const scoring = () => {
         if (minimum == playerAnswer) {
             correct++;
             document.getElementById("correct").innerHTML = correct;
@@ -154,7 +154,7 @@ jQuery(document).ready(function() {
         }
     }
 
-    findMinimum = () => {
+    const findMinimum = () => {
         minimum = Math.min.apply(null, tempArray);
         showThis = `Result: min: ${minimum}`;
     }
@@ -186,7 +186,7 @@ jQuery(document).ready(function() {
             selectedName = (jQuery("#loc3").text());
         }
 
-        removeRed = () => {
+        const removeRed = () => {
 
             jQuery("#hidden").addClass("hidden");
         }
@@ -194,7 +194,7 @@ jQuery(document).ready(function() {
         console.log("playerAnswer" + playerAnswer);
         console.log("minimum" + minimum);
 
-        textOption = () => {
+        const textOption = () => {
             if (minimum == playerAnswer) {
                 textAfterCAnswer();
             } else {
@@ -245,7 +245,7 @@ jQuery(document).ready(function() {
     });
 
 
-    textAfterCAnswer = () => {
+    const textAfterCAnswer = () => {
         jQuery("#answerText").removeClass("alsoHidden");
         jQuery("#openingStatement").html("You answered " + selectedName +
             " which was correct. Take a look at all of the options you had to choose from.");
@@ -255,7 +255,7 @@ jQuery(document).ready(function() {
         jQuery("#fourthOption").html(townArray[3] + ": " + tempArray[3] + " degrees farenheit");
     }
 
-    textAfterIAnswer = () => {
+    const textAfterIAnswer = () => {
 
         jQuery("#answerText").removeClass("alsoHidden");
         jQuery("#openingStatement").html("You answered " + selectedName +
@@ -266,7 +266,7 @@ jQuery(document).ready(function() {
         jQuery("#fourthOption").html(townArray[3] + ": " + tempArray[3] + " degrees farenheit");
     }
 
-    removeAnswerText = () => {
+    const removeAnswerText = () => {
         jQuery("#answerText").addClass("alsoHidden");
         jQuery("#openingStatement").html("");
         jQuery("#firstOption").html("");
@@ -277,7 +277,7 @@ jQuery(document).ready(function() {
     pos2 = -20;
 
 
-    frame2 = () => {
+    const frame2 = () => {
         if (pos2 == 100) {
             clearInterval(startedMotion2);
         } else
@@ -298,10 +298,10 @@ jQuery(document).ready(function() {
     }
 
 
-    windClock = () => {
+    const windClock = () => {
         let startedMotion = setInterval(timerRestart, 1000);
 
-        timerRestart = () => {
+        const timerRestart = () => {
             if (pos == 0) {
                 clearInterval(startedMotion);
                 document.getElementById("time").innerHTML = " ";
@@ -311,20 +311,20 @@ jQuery(document).ready(function() {
         }
     }
 
-    function endWait() {
+    const endWait = () => {
         jQuery("#waitTime").addClass("hidden");
     }
 
-    startWait = () => {
+    const startWait = () => {
         jQuery("#waitTime").removeClass("hidden");
     }
 
-    reset = () => {
+    const reset = () => {
         pos = 30;
         document.getElementById("time").innerHTML = pos;
     }
 
-    problemOne = () => {
+    const problemOne = () => {
         startWait();
         getNames();
         getTemps();
