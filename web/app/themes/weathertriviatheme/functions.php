@@ -6,6 +6,7 @@ jQuery(document).ready(function() {
 
     endWait();
     let pos = 30;
+    let pos2 = -20;
     let minimum;
     let tempArray = [];
     let townArray = [];
@@ -334,9 +335,7 @@ jQuery(document).ready(function() {
             let objectToChange12 = document.getElementById("loc4");
             let objectToChange13 = document.getElementById("question");
             let objectToChange14 = document.getElementById("submit");
-            let pos2 = -20;
-            let startedMotion2 = setInterval(frame2, 10);
-            frame2();
+
             jQuery("#myRadio").val(number1);
             console.log($("#myRadio").val());
             jQuery("#myRadio2").val(number2);
