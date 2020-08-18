@@ -198,6 +198,7 @@ jQuery(document).ready(function() {
         console.log("minimum" + minimum);
 
         const textOption = () => {
+
             if (minimum == playerAnswer) {
                 textAfterCAnswer();
             } else {
@@ -300,7 +301,6 @@ jQuery(document).ready(function() {
         objectToChange14.style.opacity = pos2 + "%";
     }
 
-
     const windClock = () => {
         let startedMotion = setInterval(timerRestart, 1000);
 
@@ -313,8 +313,6 @@ jQuery(document).ready(function() {
             document.getElementById("time").innerHTML = " " + pos;
         }
     }
-
-
 
     const startWait = () => {
         jQuery("#waitTime").removeClass("hidden");
@@ -336,10 +334,7 @@ jQuery(document).ready(function() {
 
         const remaining = () => {
 
-
-
             startedMotion2 = setInterval(frame2, 10);
-
 
             jQuery("#myRadio").val(number1);
             console.log($("#myRadio").val());
