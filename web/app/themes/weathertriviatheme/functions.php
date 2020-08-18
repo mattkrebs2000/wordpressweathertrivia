@@ -2,393 +2,526 @@
 function add_js_functions(){
 ?>
 <script>
-let games = [0];
-let wins = [0];
-let losses = [];
-let percentage = [0];
-let roundedPercentage;
-let victory = 0;
-let teamNameAssignment = "";
-let blankSpaces;
-let el;
-let listOfGuesses;
-let listOfWrongGuesses;
-let wrongGuesses;
-let ele;
-let elem;
-let userGuess;
-let eleme;
-let wg;
-
-document.getElementById('try').className += 'nfl';
-
-function format() {
-
-    jQuery("#try").removeClass();
-
-    document.getElementById('try').className += 'nfl';
-
-
-
-    victory = 0;
-
-    const teamNames = [
-        "bears",
-        "bengals",
-        "bills",
-        "broncos",
-        "browns",
-        "buccaneers",
-        "cardinals",
-        "chargers",
-        "chiefs",
-        "colts",
-        "cowboys",
-        "dolphins",
-        "eagles",
-        "falcons",
-        "fortyniners",
-        "giants",
-        "jaguars",
-        "jets",
-        "lions",
-        "packers",
-        "panthers",
-        "patriots",
-        "raiders",
-        "rams",
-        "ravens",
-        "redskins",
-        "saints",
-        "seahawks",
-        "steelers",
-        "texans",
-        "titans",
-        "vikings",
-    ];
-    teamNameAssignment = teamNames[Math.floor(Math.random() * teamNames
-        .length)];
-    blankSpaces = [];
-    listOfWrongGuesses = [];
-
-    wg = document.getElementById("firstGuess");
-    wg.innerHTML = listOfWrongGuesses;
-
-    for (let i = 0; i < teamNameAssignment.length; i++) {
-        blankSpaces[i] = "*";
-    }
-    el = document.getElementById("teamContainer");
-    el.innerHTML = blankSpaces.join(" ");
-
-
-
-    listOfGuesses = [];
-    listOfWrongGuesses = [];
-    wrongGuesses = 5;
-    ele = document.getElementById(
-        "missedAttemtsLeft");
-    ele.innerHTML = wrongGuesses;
-
-    document.getElementById("myAudio").pause();
-
-
-
-};
-addNFL();
-newLetter();
-
-
-function addNFL() {
-
-    if (!victory === (teamNameAssignment.length - 1)) {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("nfl");
-    }
-}
+jQuery(document).ready(function() {
 
+            endWait();
 
-function ImagesOfTeams() {
+            var pos = 30;
+            var minimum;
+            var tempArray = [];
+            var townArray = [];
+            var number1;
+            var number2;
+            var number3;
+            var number4;
+            var startedMotion;
+            var selectedName;
 
 
+            var indexOfQuestions = 0;
+            var problemsComplete = 0;
+            var correct = 0;
+            var incorrect = 0;
+            var playerAnswer;
+            var showThis;
+            var startedMotion;
+            var nonAnswers = [];
 
 
-    console.log("teamname " +
-        teamNameAssignment + victory + teamNameAssignment.length);
 
 
-    if (victory === (teamNameAssignment.length - 1) &&
-        teamNameAssignment === "bears") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("bears");
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "browns") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("browns");
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "bengals") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("bengals")
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "bills") {
+            var Cities = ["Fairbanks, Alaska", "Ulaanbaatar, Mongolia", "Yakutsk, Russia",
+                "Harbin, Heilongjiang, China", "International Falls, Minnesota", "Yukon, Canada",
+                "Fraser, Colorado", "Sarmiento, Argentina", "Glen Innes, Australia", "Sutherland, South Africa",
+                "Erzurum, Turkey", "Dallol, Ethiopia", "Buenos Aires, Argentina", "Wadi Halfa, Sudan",
+                "Tel Aviv, Israel", "Melbourne, Australia", "Timbuktu, Mali", "Ghadames, Libya", "Kebili, Tunisia",
+                "Las Vegas, Nevada", "Mexico City, Mexico", "Vancouver, Canada", "Paris, France",
+                "Barcelona, Spain", "London, England", "Boston, Massachusetts", "Philadelphia, Pennsylvania",
+                "Quito, Ecuador", "Nairobi, Kenya", "Cali, Colombia", "Fortaleza, Brazil", "Guayaquil, Ecuador",
+                "Medan, Indonesia", "Singapore", "Kuala Lumpur, Malaysia", "Bogota, Colombia"
+            ];
 
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("bills")
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "broncos") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("broncos")
-    };
 
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "buccaneers") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("buccaneers")
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "cardinals") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("cardinals")
-    };
 
-    if (victory === teamNameAssignment.length && teamNameAssignment === "chargers") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("chargers")
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "chiefs") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("chiefs")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "colts") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("colts")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "cowboys") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("cowboys")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "dolphins") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("dolphins")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "eagles") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("eagles")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "falcons") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("falcons")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "fortyniners") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("fortyniners")
-    };
+            arrayOfTownsToBeUsed = [];
 
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "giants") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("giants")
-    };
+            indexArrayForCitySelectionQ1 = [];
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "jaguars") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("jaguars")
-    };
+            var q1a1 = "";
+            var q1a2 = "";
+            var q1a3 = "";
+            var q1a4 = "";
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "jets") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("jets")
-    };
+            function getNames() {
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "lions") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("lions")
-    };
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "packers") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("packers")
-    };
+                for (i = 0; i < 4; i++) {
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "panthers") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("panthers")
-    };
+                    var newIndex1 = (Math.floor((Math.random() * 35)))
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "patriots") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("patriots")
-    };
+                    if (!indexArrayForCitySelectionQ1.includes(newIndex1)) {
+                        indexArrayForCitySelectionQ1.push(newIndex1);
+                    } else {
 
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "raiders") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("raiders")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "rams") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("rams")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "ravens") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("ravens")
-    };
-
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "redskins") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("redskins")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "saints") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("saints")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "seahawks") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("seahawks")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "steelers") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("steelers")
-    };
-
-    if (victory === teamNameAssignment.length && teamNameAssignment === "texans") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("texans")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "titans") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("titans")
-    };
-
-    if (victory === (teamNameAssignment.length - 1) && teamNameAssignment === "vikings") {
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("vikings")
-
-    };
-    if (!victory === (teamNameAssignment.length - 1)) {
-
-        jQuery("#try").removeClass();
-        jQuery("#try").addClass("nfl")
-    };
-
-}
-
-ImagesOfTeams();
-
-function newLetter() {
-    document.onkeyup = function(event) {
-
-
-
-        if (event.keyCode >= 65 && event.keyCode <= 90) {
-            userGuess = event.key.toLowerCase();
-
-
-
-            ImagesOfTeams()
-            addNFL()
-
-
-            let doubles = listOfGuesses.includes(userGuess);
-
-
-
-            if (doubles === true) {
-                alert("That letter has already been guessed. TRY AGAIN");
-                return false;
-            }
-
-            for (var i = 0; i < teamNameAssignment.length; i++) {
-                if (teamNameAssignment[i] === userGuess && doubles === false) {
-                    blankSpaces[i] = userGuess;
-                    victory++;
-                    listOfGuesses.push(userGuess);
+                        i--
+                    }
 
                 }
-            }
-            if (teamNameAssignment.indexOf(userGuess) == -1 && !listOfWrongGuesses.includes(" " + userGuess)) {
-                listOfWrongGuesses.push(" " + userGuess);
-                wrongGuesses--;
-                wg = document.getElementById("firstGuess");
-                wg.innerHTML = listOfWrongGuesses;
+                console.log("4 indexes" + indexArrayForCitySelectionQ1)
 
-                ("wrong guesses", listOfWrongGuesses);
-            }
+                var firstIndex1 = indexArrayForCitySelectionQ1[0];
+                var secondIndex1 = indexArrayForCitySelectionQ1[1];
+                var thirdIndex1 = indexArrayForCitySelectionQ1[2];
+                var fourthIndex1 = indexArrayForCitySelectionQ1[3];
+
+                console.log(firstIndex1);
+                console.log(secondIndex1);
+                console.log(thirdIndex1);
+                console.log(fourthIndex1);
+
+                q1a1 = (Cities[firstIndex1]);
+                q1a2 = (Cities[secondIndex1]);
+                q1a3 = (Cities[thirdIndex1]);
+                q1a4 = (Cities[fourthIndex1]);
 
 
-            if (victory === teamNameAssignment.length) {
-
-
-
-                alert(
-                    "Congratulations, You Won! Click the button below to play again."
-                );
-
-                games++;
-                wins++;
-                elem = document.getElementById("winTotal");
-                elem.innerHTML = wins;
-
-                percentage = (wins / games) * 100;
-                roundedPercentage = Math.round(10 * percentage) / 10;
-
-                eleme = document.getElementById("winningPercentage");
-                eleme.innerHTML = roundedPercentage;
-
-                document.getElementById("button").innerHTML =
-                    "Click Here To Play Again";
+                // console.log(q1a1);
+                // console.log(q1a2);
+                // console.log(q1a3);
+                // console.log(q1a4);
 
             }
 
-            if (wrongGuesses === 0) {
-                alert("You lost. The team was " + teamNameAssignment + ". Click the button below to try again!");
-                games++;
-                losses++;
-                elem = document.getElementById("lossTotal");
-                elem.innerHTML = " " + losses;
 
-                percentage = (wins / games) * 100;
-                roundedPercentage = Math.round(10 * percentage) / 10;
+            function getTemps() {
 
-                eleme = document.getElementById("winningPercentage");
-                eleme.innerHTML = roundedPercentage;
+                var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
-                document.getElementById("try").style.backgroundImage =
-                    "url('./images/" + teamNameAssignment + ".png')";
+                // "479d6727fd4bd4560275fbd6b4e204cc";
 
-                document.getElementById("button").innerHTML =
-                    "Click Here To Play Again";
+                var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+                    "q=" + q1a1 + "&units=imperial&appid=" + APIKey;
+
+
+                var queryURL2 = "https://api.openweathermap.org/data/2.5/weather?" +
+                    "q=" + q1a2 + "&units=imperial&appid=" + APIKey;
+
+
+                var queryURL3 = "https://api.openweathermap.org/data/2.5/weather?" +
+                    "q=" + q1a3 + "&units=imperial&appid=" + APIKey;
+
+
+                var queryURL4 = "https://api.openweathermap.org/data/2.5/weather?" +
+                    "q=" + q1a4 + "&units=imperial&appid=" + APIKey;
+
+
+
+
+                jQuery.ajax({
+                        url: queryURL,
+                        method: "GET"
+                    })
+
+                    .then(function(response) {
+
+                        number1 = parseInt(response.main.temp);
+
+                        tempArray.push(number1);
+                        townArray.push(response.name);
+                        console.log(response.name + number1);
+
+
+                    });
+
+                jQuery.ajax({
+                        url: queryURL2,
+                        method: "GET"
+                    })
+
+                    .then(function(response) {
+
+                        number2 = parseInt(response.main.temp);
+
+                        tempArray.push(number2);
+                        townArray.push(response.name);
+                        console.log(response.name + number2);
+
+                        // console.log("tempArray" + tempArray);
+                        // console.log("townArray" + townArray);
+
+
+                    });
+
+                jQuery.ajax({
+                        url: queryURL3,
+                        method: "GET"
+                    })
+
+                    .then(function(response) {
+
+                        number3 = parseInt(response.main.temp);
+
+                        tempArray.push(number3);
+                        townArray.push(response.name);
+                        console.log(response.name + number3);
+
+                        // console.log("tempArray" + tempArray);
+                        // console.log("townArray" + townArray);
+
+
+
+                        // console.log("tempArray" + tempArray);
+                        // console.log("townArray" + townArray);
+
+                    });
+
+                jQuery.ajax({
+                        url: queryURL4,
+                        method: "GET"
+                    })
+
+                    .then(function(response) {
+
+
+                        number4 = parseInt(response.main.temp);
+
+                        tempArray.push(number4);
+                        townArray.push(response.name);
+                        console.log(response.name + number4);
+
+                        // console.log("tempArray" + tempArray);
+                        // console.log("townArray" + townArray);
+
+                        console.log("tempArray" + tempArray);
+                        console.log("townArray" + townArray);
+
+
+
+                    });
+
+
+            };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function findCities() {
+                var selectedCities = [];
+                for (i = 0; i < 4; i++) {
+
+
+                }
+
+
+
+
             }
 
-            el = document.getElementById("teamContainer");
-            el.innerHTML = blankSpaces.join(" ");
 
-            ele = document.getElementById("missedAttemtsLeft");
-            ele.innerHTML = " " + wrongGuesses;
 
-            return true;
-        } else {
-            alert("Please input alphabet characters only");
-            return false;
-        }
-    };
-};
+            function scoring() {
+
+                if (minimum == playerAnswer) {
+
+                    correct++;
+                    document.getElementById("correct").innerHTML = correct;
+
+
+
+
+
+
+                } else if (minimum > playerAnswer || minimum < playerAnswer) {
+
+                    incorrect++;
+                    document.getElementById("incorrect").innerHTML = incorrect;
+
+
+
+
+
+
+
+                }
+
+
+
+
+            }
+
+
+
+
+
+            //    jQuery("#temperature").html(json.main.temp);
+            //         var newNumber=json.main.temp-273.15;
+            //         var newNumber2=newNumber*(1.8);
+            //         var fTemp=newNumber2+32;
+
+            function findMinimum() {
+                minimum = Math.min.apply(null, tempArray);
+
+                showThis = `Result: min: ${minimum}`;
+            }
+
+
+
+
+
+
+            jQuery("#submit").on("click", function() {
+
+
+
+
+                findMinimum();
+
+
+                var x = document.getElementById("myRadio").value;
+
+
+
+                var y = document.getElementById("myRadio2").value;
+
+                var w = document.getElementById("myRadio3").value;
+
+                var z = document.getElementById("myRadio4").value;
+
+
+                if (document.getElementById('myRadio4').checked) {
+
+                    console.log("myRadio4" + z);
+                    playerAnswer = z;
+
+                    selectedName = (jQuery("#loc4").text());
+
+                    // document.getElementById("demo").innerHTML=z;
+                } else if (document.getElementById('myRadio').checked) {
+
+                    console.log("myRadio" + x)
+                    playerAnswer = x;
+
+                    selectedName = (jQuery("#loc1").text());
+
+
+                    // document.getElementById("demo").innerHTML=x;
+
+                } else if (document.getElementById('myRadio2').checked) {
+
+                    console.log("myRadio" + y)
+                    playerAnswer = y;
+
+                    selectedName = (jQuery("#loc2").text());
+
+
+                    // document.getElementById("demo").innerHTML=y;
+
+                } else if (document.getElementById('myRadio3').checked) {
+
+                    console.log("myRadio" + w)
+                    playerAnswer = w;
+
+                    selectedName = (jQuery("#loc3").text());
+
+                }
+
+
+
+
+                function removeRed() {
+
+
+                    // jQuery("#bottom").addClass("bottom2");
+
+
+                    jQuery("#hidden").addClass("hidden");
+                }
+
+
+
+
+
+
+
+
+
+
+
+                console.log("playerAnswer" + playerAnswer);
+                console.log("minimum" + minimum);
+
+                function textOption() {
+                    if (minimum == playerAnswer) {
+
+                        textAfterCAnswer();
+
+                    } else {
+                        textAfterIAnswer();
+
+                    }
+                }
+                textOption();
+
+
+
+                function textAfterCAnswer() {
+
+                    jQuery("#answerText").removeClass("alsoHidden");
+
+                    jQuery("#openingStatement").html("You answered " + selectedName +
+                        " which was correct. Take a look at all of the options you had to choose from.");
+
+                    jQuery("#firstOption").html(townArray[0] + ": " + tempArray[0] + " degrees farenheit");
+
+                    jQuery("#secondOption").html(townArray[1] + ": " + tempArray[1] + " degrees farenheit");
+
+                    jQuery("#thirdOption").html(townArray[2] + ": " + tempArray[2] + " degrees farenheit");
+
+                    jQuery("#fourthOption").html(townArray[3] + ": " + tempArray[3] + " degrees farenheit");
+
+
+
+
+
+
+                }
+
+
+                function textAfterIAnswer() {
+
+                    jQuery("#answerText").removeClass("alsoHidden");
+
+
+                    jQuery("#openingStatement").html("You answered " + selectedName +
+                        " which was incorrect. Take a look at all of the options you had to choose from.");
+
+                    jQuery("#firstOption").html(townArray[0] + ": " + tempArray[0] + " degrees farenheit");
+
+                    jQuery("#secondOption").html(townArray[1] + ": " + tempArray[1] + " degrees farenheit");
+
+                    jQuery("#thirdOption").html(townArray[2] + ": " + tempArray[2] + " degrees farenheit");
+
+                    jQuery("#fourthOption").html(townArray[3] + ": " + tempArray[3] + " degrees farenheit");
+
+
+                }
+
+
+
+                // textAfterAnswer();
+
+                function removeAnswerText() {
+
+                    jQuery("#answerText").addClass("alsoHidden");
+
+                    jQuery("#openingStatement").html("");
+
+                    jQuery("#firstOption").html("");
+
+                    jQuery("#secondOption").html("");
+
+                    jQuery("#thirdOption").html("");
+
+                    jQuery("#fourthOption").html("");
+                }
+
+                setTimeout(removeAnswerText, 11000);
+
+                setTimeout(scoring, 1000);
+                problemsComplete++
+
+
+                selectedName = "";
+                arrayOfTownsToBeUsed.length = 0;
+                tempArray.length = 0;
+                townArray.length = 0;
+                indexArrayForCitySelectionQ1.length = 0;
+                jQuery("#myRadio").prop("checked", false);
+                jQuery("#myRadio2").prop("checked", false);
+                jQuery("#myRadio3").prop("checked", false);
+                jQuery("#myRadio4").prop("checked", false);
+
+                document.getElementById("time").innerHTML = " ";
+                pos = 0;
+
+
+
+
+
+                console.log("4 indexes" + indexArrayForCitySelectionQ1);
+
+
+
+
+
+
+
+
+
+                console.log("problemsComplete" + problemsComplete);
+
+                if (problemsComplete < 3000) {
+
+
+                    startWait();
+                    removeRed();
+                    setTimeout(problemOne, 1000 * 8);
+
+
+
+                } else {
+
+                    textOption();
+                    setTimeout(startWait, 1000);
+                    setTimeout(removeRed, 1000);
+
+
+                    function finalStatement() {
+                        jQuery("#answerText").text("The Game Has Ended. You got " + correct + " correct and " +
+                            incorrect + "incrorrect. ");
+                    }
+
+                    jQuery("#submit").addClass("alsohidden");
+
+
+
+                    setTimeout(finalStatement, 8000)
+
+
+
+                };
+
+
+
+            });
 </script>
 <?php
 }

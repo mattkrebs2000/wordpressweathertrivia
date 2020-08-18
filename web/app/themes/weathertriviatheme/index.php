@@ -1,64 +1,150 @@
-<div id="try">
+<body>
     <?php get_header(); ?>
 
-    <p id="title">Team Guessing Game</p>
-    <p id="Prompt"> "It's Game Time -Let's Go!"</p>
+
+    <div>
+        <div class="container" class="hidden">
+            <div class="container-fluid">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <p id="title">
+                            Geography & Weather
+                            <br>Trivia Challenge</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+
+                        <button id="begin" class="btn btn-primary btn-md">Begin</button>
 
 
-    <p id="Directions"> Show Directions</p>
+
+
+                    </div>
+                </div>
+            </div>
 
 
 
-    <ul id="DirectionsShown">
-        <li>Press the button below for a Game reset.</li>
-        <li>Once the "Name of Team" has been set (or reset) select letters which you think might be included in the
-            spelling
-            of the team name.</li>
-        <li>If you are playing on a phone or tablet you may be able to bring up a keyboard by clicking on the black
-            space at
-            the bottom of the screen.</li>
-        <li>You are allowed 5 missed attempts.</li>
-        <li> If you are able to complete the spelling of the team name correctly -You Win! </li>
-        <li>If your "Missed Attempts Remaining" reaches zero before spelling the team name -You Lose!</li>
-        <li>This game does not work on some android phones. </li>
-
-    </ul>
-
-    <h3 id="scoreBoard">Score Board</h3>
-
-    <div id="nameOfTeam"> Name<span id="colon">: </span> <span id="nameOfTeamTwo"> of Team: </span><span><strong
-                id="teamContainer">(TBD) </strong></span></div>
-
-    <div id="missedAttempts">Missed Attempts: <strong id="firstGuess"></strong>
-    </div>
-
-    <div id="missedAttemptsRemaining">Missed Attempts Remaining: <strong id="missedAttemtsLeft">5</strong></div>
 
 
-    <div id="totalWins">Total Wins: <strong id="winTotal"> 0</strong></div>
 
 
-    <div id="totalLosses">Total Losses: <strong id="lossTotal"> 0</strong></div>
+
+            <div id="bottom-Container">
+                <div id="waitTime" class="d-flex justify-content-center" class="hidden">"Please wait for a few sections
+                    as
+                    we retrieve real time data for your question."</div>
+
+                <div id="bottom" class="container">
+                    <div class="d-flex justify-content-center">
 
 
-    <div id="winningPercent">Winning Percentage: <strong id="winningPercentage"> 0</strong>%</div>
 
-    <br>
 
-    <p id="begin">
-        <button id="button" onclick="format()">Press Here to Begin</button>
-    </p>
 
-    <br>
-    <p id="audio">
-        <audio src="./images/media.io_NFL.mp3" id="myAudio" loop="loop"></audio>
 
-    </p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <input id="input" type="text">
-    <?php get_footer(); ?>
-</div>
+
+
+                        <div id="wins-container">
+                            <div id="answerText" class="alsoHidden">
+                                <div id="openingStatement"></div>
+                                <ul>
+                                    <br>
+                                    <br>
+                                    <li id="firstOption"></li>
+                                    <br>
+                                    <li id="secondOption"></li>
+                                    <br>
+                                    <li id="thirdOption"></li>
+                                    <br>
+                                    <li id="fourthOption"></li>
+                                </ul>
+
+
+                            </div>
+
+                            <container id="hidden" class="hidden">
+
+                                <div class="row">
+                                    <div class="col-12">
+
+                                        <div id="lead" class="d-flex justify-content-center">
+
+                                            <span class="stats"> <span id="timeRemaining">
+                                                    Time Remaining:<span id="time">30</span> </span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-center">
+                                                <span class="stats">
+                                                    <span id="correct2"> Correct: <span id="correct">0</span> &nbsp;
+                                                        &nbsp;<span id="incorrect2">
+                                                            Incorrect:</span>
+                                                        <span id="incorrect">0</span>
+                                                    </span>
+
+
+                                                </span></span></span></span>
+                                                <div>
+
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                                <br>
+
+
+
+                                <p id="question"></p>
+
+                                <input type="radio" name="colors" id="myRadio"><span id="loc1"></span><br>
+
+                                <input type="radio" name="colors" id="myRadio2"><span id="loc2"></span><br>
+
+                                <input type="radio" name="colors" id="myRadio3"><span id="loc3"></span><br>
+
+                                <input type="radio" name="colors" id="myRadio4"><span id="loc4"></span><br>
+
+
+                                <br>
+
+                                <button id="submit">Submit</button>
+                            </container>
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <?php get_footer(); ?>
+</body>
