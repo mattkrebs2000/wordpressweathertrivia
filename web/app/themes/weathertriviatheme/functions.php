@@ -311,7 +311,7 @@ jQuery(document).ready(function() {
         }
     }
 
-    endWait = () => {
+    function endWait() {
         jQuery("#waitTime").addClass("hidden");
     }
 
