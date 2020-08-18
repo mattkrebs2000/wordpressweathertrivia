@@ -31,6 +31,19 @@ jQuery(document).ready(function() {
     let q1a3 = "";
     let q1a4 = "";
     const objectToChange2 = document.getElementById("timeRemaining");
+    const objectToChange2 = document.getElementById("timeRemaining");
+    const objectToChange3 = document.getElementById("time");
+    const objectToChange4 = document.getElementById("correct2");
+    const objectToChange5 = document.getElementById("myRadio");
+    const objectToChange6 = document.getElementById("myRadio2");
+    const objectToChange7 = document.getElementById("myRadio3");
+    const objectToChange8 = document.getElementById("myRadio4");
+    const objectToChange9 = document.getElementById("loc1");
+    const objectToChange10 = document.getElementById("loc2");
+    const objectToChange11 = document.getElementById("loc3");
+    const objectToChange12 = document.getElementById("loc4");
+    const objectToChange13 = document.getElementById("question");
+    const objectToChange14 = document.getElementById("submit");
     const Cities = ["Fairbanks, Alaska", "Ulaanbaatar, Mongolia", "Yakutsk, Russia",
         "Harbin, Heilongjiang, China", "International Falls, Minnesota", "Yukon, Canada",
         "Fraser, Colorado", "Sarmiento, Argentina", "Glen Innes, Australia", "Sutherland, South Africa",
@@ -324,19 +337,7 @@ jQuery(document).ready(function() {
 
         function remaining() {
 
-            let objectToChange2 = document.getElementById("timeRemaining");
-            let objectToChange3 = document.getElementById("time");
-            let objectToChange4 = document.getElementById("correct2");
-            let objectToChange5 = document.getElementById("myRadio");
-            let objectToChange6 = document.getElementById("myRadio2");
-            let objectToChange7 = document.getElementById("myRadio3");
-            let objectToChange8 = document.getElementById("myRadio4");
-            let objectToChange9 = document.getElementById("loc1");
-            let objectToChange10 = document.getElementById("loc2");
-            let objectToChange11 = document.getElementById("loc3");
-            let objectToChange12 = document.getElementById("loc4");
-            let objectToChange13 = document.getElementById("question");
-            let objectToChange14 = document.getElementById("submit");
+
 
             startedMotion2 = setInterval(frame2, 10);
 
