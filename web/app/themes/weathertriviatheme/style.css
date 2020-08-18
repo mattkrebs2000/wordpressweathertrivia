@@ -19,7 +19,7 @@ body, html {
   height: 100vh;
 
   background-image: url('./images/weather.png');
-  background-size: cover;
+  background-size: 140%;
   background-repeat: no-repeat;
   background-position:center;
   background-color: #b98970;
