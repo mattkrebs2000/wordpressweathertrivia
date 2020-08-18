@@ -84,7 +84,7 @@ jQuery(document).ready(function() {
 
 
 
-    function getTemps() {
+    getTemps = () => {
 
         const APIKey = "166a433c57516f51dfab1f7edaed8413";
         const queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
@@ -144,7 +144,7 @@ jQuery(document).ready(function() {
             });
     };
 
-    function scoring() {
+    scoring = () => {
         if (minimum == playerAnswer) {
             correct++;
             document.getElementById("correct").innerHTML = correct;
@@ -154,7 +154,7 @@ jQuery(document).ready(function() {
         }
     }
 
-    function findMinimum() {
+    findMinimum = () => {
         minimum = Math.min.apply(null, tempArray);
         showThis = `Result: min: ${minimum}`;
     }
@@ -186,7 +186,7 @@ jQuery(document).ready(function() {
             selectedName = (jQuery("#loc3").text());
         }
 
-        function removeRed() {
+        removeRed = () => {
 
             jQuery("#hidden").addClass("hidden");
         }
@@ -194,7 +194,7 @@ jQuery(document).ready(function() {
         console.log("playerAnswer" + playerAnswer);
         console.log("minimum" + minimum);
 
-        function textOption() {
+        textOption = () => {
             if (minimum == playerAnswer) {
                 textAfterCAnswer();
             } else {
@@ -234,8 +234,9 @@ jQuery(document).ready(function() {
             setTimeout(startWait, 1000);
             setTimeout(removeRed, 1000);
 
-            function finalStatement() {
-                jQuery("#answerText").text("The Game Has Ended. You got " + correct + " correct and " +
+            finalStatement = () => {
+                jQuery("#answerText").text("The Game Has Ended. You got " + correct +
+                    " correct and " +
                     incorrect + "incrorrect. ");
             }
             jQuery("#submit").addClass("alsohidden");
@@ -244,7 +245,7 @@ jQuery(document).ready(function() {
     });
 
 
-    function textAfterCAnswer() {
+    textAfterCAnswer = () => {
         jQuery("#answerText").removeClass("alsoHidden");
         jQuery("#openingStatement").html("You answered " + selectedName +
             " which was correct. Take a look at all of the options you had to choose from.");
@@ -254,7 +255,7 @@ jQuery(document).ready(function() {
         jQuery("#fourthOption").html(townArray[3] + ": " + tempArray[3] + " degrees farenheit");
     }
 
-    function textAfterIAnswer() {
+    textAfterIAnswer = () => {
 
         jQuery("#answerText").removeClass("alsoHidden");
         jQuery("#openingStatement").html("You answered " + selectedName +
@@ -265,7 +266,7 @@ jQuery(document).ready(function() {
         jQuery("#fourthOption").html(townArray[3] + ": " + tempArray[3] + " degrees farenheit");
     }
 
-    function removeAnswerText() {
+    removeAnswerText = () => {
         jQuery("#answerText").addClass("alsoHidden");
         jQuery("#openingStatement").html("");
         jQuery("#firstOption").html("");
@@ -276,7 +277,7 @@ jQuery(document).ready(function() {
     pos2 = -20;
 
 
-    function frame2() {
+    frame2 = () => {
         if (pos2 == 100) {
             clearInterval(startedMotion2);
         } else
@@ -297,10 +298,10 @@ jQuery(document).ready(function() {
     }
 
 
-    function windClock() {
+    windClock = () => {
         let startedMotion = setInterval(timerRestart, 1000);
 
-        function timerRestart() {
+        timerRestart = () => {
             if (pos == 0) {
                 clearInterval(startedMotion);
                 document.getElementById("time").innerHTML = " ";
@@ -310,20 +311,20 @@ jQuery(document).ready(function() {
         }
     }
 
-    function endWait() {
+    endWait = () => {
         jQuery("#waitTime").addClass("hidden");
     }
 
-    function startWait() {
+    startWait = () => {
         jQuery("#waitTime").removeClass("hidden");
     }
 
-    function reset() {
+    reset = () => {
         pos = 30;
         document.getElementById("time").innerHTML = pos;
     }
 
-    function problemOne() {
+    problemOne = () => {
         startWait();
         getNames();
         getTemps();
@@ -332,7 +333,7 @@ jQuery(document).ready(function() {
         setTimeout(windClock, 3500);
         setTimeout(endWait, 3000);
 
-        function remaining() {
+        remaining = () => {
 
 
 
@@ -351,7 +352,8 @@ jQuery(document).ready(function() {
                 'display': 'block'
             });
             jQuery("#hidden").removeClass("hidden");
-            document.getElementById("question").textContent = "Which of these places is currently the coldest?";
+            document.getElementById("question").textContent =
+                "Which of these places is currently the coldest?";
             document.getElementById("loc1").textContent = " " + q1a1;
             document.getElementById("loc2").textContent = " " + q1a2;
             document.getElementById("loc3").textContent = " " + q1a3;
