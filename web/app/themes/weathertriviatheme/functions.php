@@ -259,7 +259,7 @@ jQuery(document).ready(function() {
         jQuery("#thirdOption").html("");
         jQuery("#fourthOption").html("");
     }
-    let pos2 = -20;
+    pos2 = -20;
     const startedMotion2 = setInterval(frame2, 10);
 
     function frame2() {
