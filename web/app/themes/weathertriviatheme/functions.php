@@ -21,7 +21,6 @@ jQuery(document).ready(function() {
     let incorrect = 0;
     let playerAnswer;
     let showThis;
-    let startedMotion;
     let arrayOfTownsToBeUsed = [];
     let indexArrayForCitySelectionQ1 = [];
     let nonAnswers = [];
