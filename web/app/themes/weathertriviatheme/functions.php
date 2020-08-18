@@ -297,6 +297,8 @@ jQuery(document).ready(function() {
 
 
 
+
+
     jQuery("#submit").on("click", function() {
 
 
@@ -522,6 +524,189 @@ jQuery(document).ready(function() {
 
 
     });
+
+
+
+
+
+    function windClock() {
+
+        var startedMotion = setInterval(timerRestart, 1000);
+
+        function timerRestart() {
+
+
+            if (pos == 0) {
+                clearInterval(startedMotion);
+                document.getElementById("time").innerHTML = " ";
+            } else
+                pos--;
+            document.getElementById("time").innerHTML = " " + pos;
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+    function assessProblem() {
+
+
+
+
+    }
+
+    function endWait() {
+        jQuery("#waitTime").addClass("hidden");
+    }
+
+
+    function startWait() {
+        jQuery("#waitTime").removeClass("hidden");
+
+    }
+
+    function reset() {
+
+        pos = 30;
+        document.getElementById("time").innerHTML = pos;
+    }
+
+    function problemOne() {
+
+
+
+
+
+
+        startWait();
+        getNames();
+        getTemps();
+        setTimeout(remaining, 3000);
+        setTimeout(reset, 3500);
+        setTimeout(windClock, 3500);
+        setTimeout(endWait, 3000);
+
+
+
+
+        //figure out how to access temps for the numbers inside val.().
+        function remaining() {
+
+
+            var objectToChange2 = document.getElementById("timeRemaining");
+            var objectToChange3 = document.getElementById("time");
+            var objectToChange4 = document.getElementById("correct2");
+            var objectToChange5 = document.getElementById("myRadio");
+            var objectToChange6 = document.getElementById("myRadio2");
+            var objectToChange7 = document.getElementById("myRadio3");
+            var objectToChange8 = document.getElementById("myRadio4");
+            var objectToChange9 = document.getElementById("loc1");
+            var objectToChange10 = document.getElementById("loc2");
+            var objectToChange11 = document.getElementById("loc3");
+            var objectToChange12 = document.getElementById("loc4");
+            var objectToChange13 = document.getElementById("question");
+            var objectToChange14 = document.getElementById("submit");
+
+
+
+
+            var pos2 = -20;
+            var startedMotion2 = setInterval(frame2, 10);
+
+            function frame2() {
+                if (pos2 == 100) {
+                    clearInterval(startedMotion2);
+                } else
+                    pos2++;
+
+                objectToChange2.style.opacity = pos2 + "%";
+                objectToChange3.style.opacity = pos2 + "%";
+                objectToChange4.style.opacity = pos2 + "%";
+                objectToChange5.style.opacity = pos2 + "%";
+                objectToChange6.style.opacity = pos2 + "%";
+                objectToChange7.style.opacity = pos2 + "%";
+                objectToChange8.style.opacity = pos2 + "%";
+                objectToChange9.style.opacity = pos2 + "%";
+                objectToChange10.style.opacity = pos2 + "%";
+                objectToChange11.style.opacity = pos2 + "%";
+                objectToChange12.style.opacity = pos2 + "%";
+                objectToChange13.style.opacity = pos2 + "%";
+                objectToChange14.style.opacity = pos2 + "%";
+
+
+
+
+
+            }
+            frame2()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            jQuery("#myRadio").val(number1);
+            console.log($("#myRadio").val());
+            jQuery("#myRadio2").val(number2);
+            jQuery("#myRadio3").val(number3);
+            jQuery("#myRadio4").val(number4);
+
+            jQuery('#bottom').css({
+                'opacity': '0.8'
+            });
+            jQuery('#bottom').css({
+                'display': 'block'
+            });
+
+            // $("#bottom").removeClass("bottom2");
+
+
+            jQuery("#hidden").removeClass("hidden");
+
+            document.getElementById("question").textContent = "Which of these places is currently the coldest?";
+
+            document.getElementById("loc1").textContent = " " + q1a1;
+            document.getElementById("loc2").textContent = " " + q1a2;
+            document.getElementById("loc3").textContent = " " + q1a3;
+            document.getElementById("loc4").textContent = " " + q1a4;
+
+            //scoring -- if numbers are the same correct ++ else if they are different -- incoorect ++ 
+
+            //clear values of q1a1, q1a2 q1a3 q1a4 and create a new for loop for iddentifying new values. 
+        }
+    }
+
+    jQuery("#begin").on("click", function() {
+
+
+        startWait();
+        setTimeout(problemOne, 1000 * .1);
+        jQuery("#begin").addClass("bottom2");
+
+
+    });
+
+
+
 });
 </script>
 <?php
