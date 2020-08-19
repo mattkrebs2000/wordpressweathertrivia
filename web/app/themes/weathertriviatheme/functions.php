@@ -3,7 +3,7 @@ function add_js_functions(){
 ?>
 <script>
 jQuery(document).ready(function() {
-
+    const second = 1;
     let pos = 30;
     let pos2 = -20;
     let minimum;
@@ -306,7 +306,7 @@ jQuery(document).ready(function() {
             clearInterval(startedMotion);
             document.getElementById("time").innerHTML = " ";
         } else
-            pos--;
+            pos - second;
         document.getElementById("time").innerHTML = " " + pos;
     }
 
