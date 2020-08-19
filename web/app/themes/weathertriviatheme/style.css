@@ -30,7 +30,9 @@ body, html {
 
 #title {
 text-align: center;
-font-size:5vw;
+font-size:8vw;
+max-width: 90%;
+max-width: 40px;
 margin-top:10px;
 color:red;
 text-shadow: 2px 2px 4px black;
