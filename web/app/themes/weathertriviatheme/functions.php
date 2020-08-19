@@ -312,6 +312,7 @@ jQuery(document).ready(function() {
 
 
     const windClock = () => {
+        clearInterval(startedMotion);
         let startedMotion = setInterval(timerRestart, 1000);
 
     }
