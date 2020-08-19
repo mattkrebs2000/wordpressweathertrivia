@@ -306,7 +306,7 @@ jQuery(document).ready(function() {
             clearInterval(startedMotion);
             document.getElementById("time").innerHTML = " ";
         } else
-            pos - second;
+            pos = pos - second;
         document.getElementById("time").innerHTML = " " + pos;
     }
 
