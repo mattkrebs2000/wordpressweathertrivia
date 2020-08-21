@@ -4,7 +4,7 @@
 ![alt text][logo]
 
 
-[logo]: https://github.com/mattkrebs1974/WeatherTrivia/blob/master/TriviaChallenge%20copy.png
+[logo]: https://github.com/mattkrebs2000/wordpressweathertrivia/blob/master/coverimage.png
 
 This trivia game uses the API OpenWeatherMap to access real-time temperatures from around the world. The app is a wordpress application with a custom made theme. 
 
